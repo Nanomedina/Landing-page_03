@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@font-face {
+    font-family: star-jedi;
+    src: url(./Font/star_jedi/starjedi/Starjedi.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red */
+}
+
+
+
+:root{
+--color1: #0b0912;
+--color2: #191b30;
+--color3: #6d4cb0;
+--color4: #b7b4c7;
+--color5: white;
+--color6: rgb(185, 185, 39)
+}
+
+body {
+    background-image: url(./IMG/5445-estrellas.jpg);
+    }
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar{
+    background-color:var(--color2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    }
+
+.imagen {
+    margin:0;
+    padding: 0;
+    width: 50%;
+    padding-left: 40px;
+    display: flex;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.toggle {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    list-style: none;
+    font-family: "oswald";
+    }
+
+a {
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 20px;
+    font-family: "oswald", sans-serif;
+}
+
+label{
+    cursor: pointer;
+    display:none;
+    color: var(--color4);
+    width: 40px;
+    height: 40px;
+    font-size: 2.5rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.toggle li {
+    display: block;
+}
+
+.menu-toggle:checked + .toggle {
+    display: block;
+}
+
+.navbar a:hover {
+    font-size: 25px ;
+    transition: 0.3s;
+    color: var(--color2);
+    width: 1rem;
+    background-color: var(--color4);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input {
+    height: 30px;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;    
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(./IMG/Fondo.jfif);
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: 100vh;
+}
+
+.star {
+    width: 500px;
+    border-radius: 1rem;
+    opacity: 0.8;
+    display: inline;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 380px;
+}
+
+.slogan h2 {
+    color: var(--color2);
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 4.2rem;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    font-family: "star-jedi", sans-serif;
+}
+
+.slogan h3 {
+    color: var(--color5);
+    font-family: "star-jedi", sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.texto {
+    width: 100%;
+    height: 40vw;
+    }
+
+.texto p {
+    color: var(--color4);
+    font-family: "star-jedi", sans-serif;
+    text-align: center;
+    font-size: 4rem;
+    height: 100%;
+    padding-top: 7.5rem; 
+}  
+
+h1{
+    font-family: "star-jedi", sans-serif;
+    text-align:center;
+    font-size: 7rem;
+    color:var(--color6);
+    background-position:bottom;
+    text-decoration:underline;
+    text-decoration-style:double;
+    height: 20rem;
+    padding-top: 6rem;  
+    
+}
+
+h1:hover {
+    animation-name: titulos;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+@keyframes titulos {
+    0% {font-size: 7rem;}
+    100% {font-size: 0rem;}
+}
+
+.pelis {
+    height: 60rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+}
+.descripcion_peli {
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+    width: 40%;
+    height: 35rem;
+    border:double rgb(185, 185, 39) 20px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.descripcion_peli img {
+    width: 40%;
+    height: auto;
+}
+
+.descripcion_peli p {
+    width: 50%;
+    height: auto;
+    font-family: "oswald", sans-serif;
+    color: var(--color5);
+    }
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+}
+
+.formulario{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 15rem;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.mensaje{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.datos input {
+    margin: 10px;
+    width: 75%;
+    background-color: var(--color2);
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px white;
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.mensaje textarea {
+    height: 200px;
+    width: 80%;
+    background-color: var(--color2);
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px white;
+    font-size: 1.5rem;
+    color: white;
+    outline: none;
+    padding-top: 1rem ;
+    padding-left: 1rem;
+}
+
+.contacto a{
+    margin: 10px auto;
+    font-family: "star-jedi", sans-serif;
+    color: var(--color2);
+    font-size: 25px;
+    background-color: var(--color4);
+    border-radius: 5px;
+    width: auto;
+    transition: none;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    display: block;
+    margin: 15px;
+    font-size: 3rem;
+}
+
+
+@media (max-width: 1300px) {
+
+.toggle {
+    display: none;
+}
+
+label{
+    display: block;
+    order:2
+}
+
+.menu-toggle:checked + .toggle {
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+
+.info {
+    flex-direction:column;
+    height: 75vh;
+}
+
+.star {
+    display: none;
+}
+
+.texto p {
+    font-size: 2rem; 
+}  
+
+h1{
+    font-size: 3.5rem;
+    height: 15rem;
+}
+
+@keyframes titulos {
+    0% {font-size: 3.5rem;}
+    100% {font-size: 0rem;}
+}
+
+.pelis {
+        flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:nowrap;
+}
+
+.descripcion_peli {
+    width: 80%;
+    height: 30rem;
+}
+
+.descripcion_peli img {
+    width: auto;
+    height: 25rem;
+}
+
+footer a {
+    font-size: 2.2rem;
+}
+
+}
+
+@media (max-width: 768px) {
+
+    .texto p {
+        font-size: 1rem; 
+        padding-top: 4rem;
+    }  
+    
+    .navbar{
+        height: 100px;
+    }
+
+    h1{
+        font-size: 3.5rem;
+        height: 10rem;
+        padding-top: 4rem;
+    }
+    
+    .descripcion_peli {
+        width: 80%;
+        height: 40rem;
+        flex-direction: column;
+    }
+    
+    .descripcion_peli img {
+        width: auto;
+        height: 10rem;
+    }
+    
+    .descripcion_peli p {
+        width: 95%;
+        }
+
+    .contacto{
+        height: 30rem;
+        }
+
+        footer a {
+            font-size: 1.5rem;
+        }
+
+    }
+
+
+
+    @media (max-width: 480px) {
+
+        .navbar{
+            height: 50px;
+            align-items: flex-start;
+            }
+
+        .imagen {
+            width: auto;
+            padding-left: 10px;
+            margin: auto;
+            position: inherit;
+        }
+
+        .info {
+            background-size: cover;
+            background-position:center;
+            width: 100%;
+            height: 35vh;
+        }
+
+        .slogan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 380px;
+        }
+
+        .slogan h2 {
+            font-size: 1.5rem;
+            max-width: 350px;
+            margin-bottom: 0.5rem;
+            }
+
+        .slogan h3 {
+            font-size: 15px;
+            max-width: 300px;
+        }    
+        .texto {
+            height: 30vw;
+            }
+        .texto p {
+            font-size: 0.75rem; 
+            padding-top: 2rem;
+            height: 6rem;
+        }  
+        
+        h1{
+            font-size: 2rem;
+            height: 6rem;
+            padding-top: 2.5rem;
+        }
+        
+        .descripcion_peli {
+            width: 80%;
+            height: 45rem;
+            flex-direction: column;
+            border:double rgb(185, 185, 39) 10px;
+        }
+        
+        .descripcion_peli img {
+            width: auto;
+            height: 10rem;
+        }
+        
+        .descripcion_peli p {
+            width: 95%;
+            }
+        
+        footer a {
+            font-size: 1rem;
+        }
+        } 
